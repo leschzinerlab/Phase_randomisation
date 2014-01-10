@@ -1,0 +1,16 @@
+#!/bin/csh -x
+#
+set filmno = betaGal_2012_all89images
+#
+#
+setenv  IN_PART     ${filmno}_p.stk
+#setenv  IN_BACK     ${filmno}_b_matched.stk
+setenv  OUT         ${filmno}_p_random_${resol}A.stk
+~rh15/image/source/makestack_HRnoise.exe <<EOF
+81600.0,14.0,15,F    !XMAG, DSTEP, RESOLUTION, LBACK (T/F)
+EOF
+#
+# LBACK = F to retain particle amplitudes and randomise phases
+# LBACK = T to read/substitute background density structure factors (needs additional file)
+#
+
