@@ -1,4 +1,4 @@
 (time gfortran -O -w -o makestack_HRnoise.exe  makestack_HRnoise.for plot2klib.a  ifftlib.a imlib2010.a misclib.a genlib.a ) &
 
-#Need to be compiled on aida!
+
 
